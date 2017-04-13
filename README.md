@@ -36,7 +36,7 @@ return [
 
 ```twig
 {{ craft.pushover.send({
-    title: 'Failed deployment
+    title: 'Failed deployment',
     message: 'Deployment to xxx.xxx.xxx.xx failed',
     sound: 'spacealarm',
     priority: 'emergency',
