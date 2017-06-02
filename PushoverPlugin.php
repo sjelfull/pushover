@@ -44,7 +44,7 @@ class PushoverPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/sjelfull/pushover/blob/master/README.md';
+        return 'https://superbig.co/plugins/pushover';
     }
 
     /**
@@ -52,7 +52,7 @@ class PushoverPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/sjelfull/pushover/master/releases.json';
+        return 'https://superbig.co/plugins/pushover/feed';
     }
 
     /**
@@ -60,7 +60,7 @@ class PushoverPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     /**
@@ -85,70 +85,6 @@ class PushoverPlugin extends BasePlugin
     public function getDeveloperUrl()
     {
         return 'https://superbig.co';
-    }
-
-    /**
-     * @return bool
-     */
-    public function hasCpSection()
-    {
-        return false;
-    }
-
-    /**
-     */
-    public function onBeforeInstall()
-    {
-    }
-
-    /**
-     */
-    public function onAfterInstall()
-    {
-    }
-
-    /**
-     */
-    public function onBeforeUninstall()
-    {
-    }
-
-    /**
-     */
-    public function onAfterUninstall()
-    {
-    }
-
-    /**
-     * @return array
-     */
-    protected function defineSettings()
-    {
-        return array(
-            'someSetting' => array(AttributeType::String, 'label' => 'Some Setting', 'default' => ''),
-        );
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSettingsHtml()
-    {
-       return craft()->templates->render('pushover/Pushover_Settings', array(
-           'settings' => $this->getSettings()
-       ));
-    }
-
-    /**
-     * @param mixed $settings  The Widget's settings
-     *
-     * @return mixed
-     */
-    public function prepSettings($settings)
-    {
-        // Modify $settings here...
-
-        return $settings;
     }
 
 }
