@@ -96,6 +96,10 @@ class PushoverService extends BaseApplicationComponent
                     }
                 break;
 
+                case 'expire':
+                    $message->setExpire($value);
+                break;
+
                 case 'html':
                     $message->setHtml($value);
                 break;

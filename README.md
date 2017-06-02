@@ -45,6 +45,7 @@ return [
     urlTitle: 'Site',
     callback: 'https://callback.url/endpoint',
     retry: 60,
+    expire: 1800
 }) }}
 ```
 
