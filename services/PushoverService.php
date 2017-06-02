@@ -132,7 +132,7 @@ class PushoverService extends BaseApplicationComponent
             $client->push($message);
             return true;
         } catch (PushoverException $e) {
-            PushoverPlugin::log(LogLevel::Error, 'ERROR: ', $e->getMessage());
+            PushoverPlugin::log(LogLevel::Error, 'Error: ' . $e->getMessage());
             return false;
         }
     }
